@@ -5,9 +5,8 @@ class LeasesController < ApplicationController
     end
 
     def destroy
-        lease = Lease.find_by(:id params[:id])
+        lease = Lease.find_by(id: params[:id])
         lease.destroy
-        render json: lease
     end
 
     private

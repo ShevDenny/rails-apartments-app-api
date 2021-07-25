@@ -12,7 +12,7 @@ class TenantsController < ApplicationController
     def destroy
         tenant = Tenant.find_by(:id params[:id])
         tenant.destroy
-        render json: tenant
+        render json: {message: "Tenant was deleted"}
     end
     
     def update
